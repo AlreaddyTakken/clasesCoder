@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #2b2292, #332da3, #3b38b5, #4243c7, #494fd9, #5358e2, #5c62eb, #656bf4, #7274f6, #7d7cf8, #8885f9, #938efb);
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    background-image: linear-gradient(to bottom, #000000, #382324, #6c4139, #9e6648, #c99253, #cc9d51, #ccaa51, #cbb652, #b09d43, #968535, #7d6e27, #645719);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/************TRANSFORM
+    posiciones
+    rotaciones
+    escalar elementos
+    deformarlos
+    "NO ROMPE EL CODIGO YA QUE NO SE PISA ENTRE ELLO"
+*************/
+p{
+    color: white;
+}
+
+.seccion-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .seccion-principal img:hover{
+    transform: translate(200px); Hace que al momento de pasar el mouse sobre el dispositivo, el transale mueve el objeto de la etiqueta
+} */
+
+.seccion-principal div{
+    width: 25rem;
+    /* transform: translate(-12.5rem); */
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.seccion-principal img:nth-child(1){
+    width: 600px;
+    transform: translate(130px) rotate(-30deg);/**Rotate trabaja en grados por lo que todo lo que se necesite hacer dichas transformaciones, el vlaor lleva deg(degrees)**/
+}
+
+.seccion-principal img:last-child{
+    width: 37.5rem;
+    transform: translate(-130px) rotate(30deg);
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.card{
+    width: 12.5rem;
+    height: 15.625rem;
+    background-color: rgba(128, 128, 128, 0.685);
+}
+
+.card-img{
+    width: 100%;
+    height: 70%;
+    overflow: hidden; /**la propiedad overflow:hiden esconde el excedente del la imagen para que esta no se salga del contenedor**/
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-img img:hover{
+    transform: scale(1.9);/**scale transforma el tamaño del pbjeto. éste siempre parte en 1 como default**/
+
+}
